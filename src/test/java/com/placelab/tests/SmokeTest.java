@@ -10,8 +10,12 @@ import org.testng.annotations.Test;
 public class SmokeTest {
 
     private WebDriver driver;
-    final String browserName = "chrome"; //System.getproperty("browser") wasn't working
 
+    private void setUpChromeDriver() {
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+        this.driver = new ChromeDriver();
+    }
+    final String browserName = System.getProperty("browser");
 
     @BeforeTest
     private void setDriver() {
@@ -34,4 +38,6 @@ public class SmokeTest {
     public void tearDown() {
         driver.close();
     }
+
+    //run tests with mvn clean verify -Dbrowser=chrome
 }
