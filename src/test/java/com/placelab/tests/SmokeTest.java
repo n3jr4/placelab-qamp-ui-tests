@@ -1,6 +1,6 @@
 package com.placelab.tests;
 
-import com.placelab.utilis.WebDriverSetup;
+import com.placelab.utils.WebDriverSetup;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
@@ -10,11 +10,6 @@ import org.testng.annotations.Test;
 public class SmokeTest {
 
     private WebDriver driver;
-
-    private void setUpChromeDriver() {
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-        this.driver = new ChromeDriver();
-    }
     final String browserName = System.getProperty("browser");
 
     @BeforeTest
@@ -38,6 +33,14 @@ public class SmokeTest {
     public void tearDown() {
         driver.close();
     }
+
+    /* Keeping this for reference for manually setup chromebrowser driver
+
+    private void setUpChromeDriver() {
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+        this.driver = new ChromeDriver();
+    }
+    */
 
     //run tests with mvn clean verify -Dbrowser=chrome
 }
