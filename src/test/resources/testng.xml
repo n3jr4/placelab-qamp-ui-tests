@@ -1,9 +1,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="Smoke suite" verbose="1" >
-    <test name="Placelab Smoke test">
-    <classes>
-        <class name="com.placelab.tests.SmokeTest" />
-    </classes>
+<suite name="Login suite" verbose="1">
+    <test name="Placelab Login test">
+        <classes>
+            <class name="com.placelab.tests.UIDisplayedElementsAndValues"/>
+            <class name="com.placelab.tests.PositiveLoginTestValidCredentials"/>
+            <class name="com.placelab.tests.NegativeLoginTestEmptyFields"/>
+            <class name="com.placelab.tests.NegativeLoginTestInvalidEmail"/>
+            <class name="com.placelab.tests.NegativeLoginTestInvalidPassword"/>
+            <class name="com.placelab.tests.ForgotPasswordFunctionality"/>
+        </classes>
     </test>
 </suite>
