@@ -1,0 +1,8 @@
+com\placelab\tests\PositiveLoginTestValidCredentials.class
+com\placelab\tests\PositiveForgotPasswordTest.class
+com\placelab\utils\WebDriverSetup.class
+com\placelab\tests\NegativeLoginTestInvalidPassword.class
+com\placelab\tests\NegativeLoginTestInvalidEmail.class
+com\placelab\tests\UIDisplayedElementsAndValues.class
+com\placelab\tests\LoginFormDisplayed.class
+com\placelab\tests\NegativeLoginTestEmptyFields.class

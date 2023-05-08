@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-05-08T18:46:02 CEST" name="Login suite" finished-at="2023-05-08T18:49:23 CEST" duration-ms="201642">
+    <groups>
+    </groups>
+    <test started-at="2023-05-08T18:46:02 CEST" name="Placelab Login test" finished-at="2023-05-08T18:49:23 CEST" duration-ms="201642">
+      <class name="com.placelab.tests.NegativeLoginTestInvalidPassword">
+        <test-method is-config="true" signature="setDriverAndCheckIfLoginFormIsDisplayed()[pri:0, instance:com.placelab.tests.NegativeLoginTestInvalidPassword@564fabc8]" started-at="2023-05-08T18:46:14 CEST" name="setDriverAndCheckIfLoginFormIsDisplayed" finished-at="2023-05-08T18:46:17 CEST" duration-ms="3543" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriverAndCheckIfLoginFormIsDisplayed -->
+        <test-method signature="testLoginWithInvalidPassword(java.lang.String)[pri:0, instance:com.placelab.tests.NegativeLoginTestInvalidPassword@564fabc8]" started-at="2023-05-08T18:49:00 CEST" name="testLoginWithInvalidPassword" finished-at="2023-05-08T18:49:11 CEST" duration-ms="11173" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[skandronejra@gmail.com]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithInvalidPassword -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.placelab.tests.NegativeLoginTestInvalidPassword@564fabc8]" started-at="2023-05-08T18:49:23 CEST" name="tearDown" finished-at="2023-05-08T18:49:23 CEST" duration-ms="207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.placelab.tests.NegativeLoginTestInvalidPassword -->
+      <class name="com.placelab.tests.NegativeLoginTestEmptyFields">
+        <test-method is-config="true" signature="setDriverAndCheckIfLoginFormIsDisplayed()[pri:0, instance:com.placelab.tests.NegativeLoginTestEmptyFields@35cabb2a]" started-at="2023-05-08T18:46:02 CEST" name="setDriverAndCheckIfLoginFormIsDisplayed" finished-at="2023-05-08T18:46:10 CEST" duration-ms="8476" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriverAndCheckIfLoginFormIsDisplayed -->
+        <test-method signature="testLoginWithEmptyFields()[pri:0, instance:com.placelab.tests.NegativeLoginTestEmptyFields@35cabb2a]" started-at="2023-05-08T18:48:37 CEST" name="testLoginWithEmptyFields" finished-at="2023-05-08T18:48:49 CEST" duration-ms="11058" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithEmptyFields -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.placelab.tests.NegativeLoginTestEmptyFields@35cabb2a]" started-at="2023-05-08T18:49:23 CEST" name="tearDown" finished-at="2023-05-08T18:49:23 CEST" duration-ms="128" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.placelab.tests.NegativeLoginTestEmptyFields -->
+      <class name="com.placelab.tests.PositiveForgotPasswordTest">
+        <test-method is-config="true" signature="setDriverAndCheckIfLoginFormIsDisplayed()[pri:0, instance:com.placelab.tests.PositiveForgotPasswordTest@16d04d3d]" started-at="2023-05-08T18:46:17 CEST" name="setDriverAndCheckIfLoginFormIsDisplayed" finished-at="2023-05-08T18:46:21 CEST" duration-ms="3293" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriverAndCheckIfLoginFormIsDisplayed -->
+        <test-method signature="testForgetPasswordLink(java.lang.String,java.lang.String)[pri:0, instance:com.placelab.tests.PositiveForgotPasswordTest@16d04d3d]" started-at="2023-05-08T18:49:11 CEST" name="testForgetPasswordLink" finished-at="2023-05-08T18:49:23 CEST" duration-ms="11672" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[skandronejra@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Hamza1202.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testForgetPasswordLink -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.placelab.tests.PositiveForgotPasswordTest@16d04d3d]" started-at="2023-05-08T18:49:23 CEST" name="tearDown" finished-at="2023-05-08T18:49:23 CEST" duration-ms="121" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.placelab.tests.PositiveForgotPasswordTest -->
+      <class name="com.placelab.tests.NegativeLoginTestInvalidEmail">
+        <test-method is-config="true" signature="generateRandomEmail()[pri:0, instance:com.placelab.tests.NegativeLoginTestInvalidEmail@36bc55de]" started-at="2023-05-08T18:46:10 CEST" name="generateRandomEmail" finished-at="2023-05-08T18:46:10 CEST" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateRandomEmail -->
+        <test-method is-config="true" signature="setDriverAndCheckIfLoginFormIsDisplayed()[pri:0, instance:com.placelab.tests.NegativeLoginTestInvalidEmail@36bc55de]" started-at="2023-05-08T18:46:10 CEST" name="setDriverAndCheckIfLoginFormIsDisplayed" finished-at="2023-05-08T18:46:14 CEST" duration-ms="3699" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriverAndCheckIfLoginFormIsDisplayed -->
+        <test-method signature="testLoginWithInvalidEmail(java.lang.String)[pri:0, instance:com.placelab.tests.NegativeLoginTestInvalidEmail@36bc55de]" started-at="2023-05-08T18:48:49 CEST" name="testLoginWithInvalidEmail" finished-at="2023-05-08T18:49:00 CEST" duration-ms="11217" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Hamza1202.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithInvalidEmail -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.placelab.tests.NegativeLoginTestInvalidEmail@36bc55de]" started-at="2023-05-08T18:49:23 CEST" name="tearDown" finished-at="2023-05-08T18:49:23 CEST" duration-ms="101" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.placelab.tests.NegativeLoginTestInvalidEmail -->
+      <class name="com.placelab.tests.PositiveLoginTestValidCredentials">
+        <test-method is-config="true" signature="setDriverAndCheckIfLoginFormIsDisplayed()[pri:0, instance:com.placelab.tests.PositiveLoginTestValidCredentials@3a93b025]" started-at="2023-05-08T18:46:21 CEST" name="setDriverAndCheckIfLoginFormIsDisplayed" finished-at="2023-05-08T18:46:25 CEST" duration-ms="4101" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriverAndCheckIfLoginFormIsDisplayed -->
+        <test-method signature="testLoginWithValidCredentials(java.lang.String,java.lang.String)[pri:0, instance:com.placelab.tests.PositiveLoginTestValidCredentials@3a93b025]" started-at="2023-05-08T18:48:20 CEST" name="testLoginWithValidCredentials" finished-at="2023-05-08T18:48:37 CEST" duration-ms="17203" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[skandronejra@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Hamza1202.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginWithValidCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.placelab.tests.PositiveLoginTestValidCredentials@3a93b025]" started-at="2023-05-08T18:49:23 CEST" name="tearDown" finished-at="2023-05-08T18:49:23 CEST" duration-ms="125" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.placelab.tests.PositiveLoginTestValidCredentials -->
+      <class name="com.placelab.tests.UIDisplayedElementsAndValues">
+        <test-method is-config="true" signature="setDriver()[pri:0, instance:com.placelab.tests.UIDisplayedElementsAndValues@16293aa2]" started-at="2023-05-08T18:46:25 CEST" name="setDriver" finished-at="2023-05-08T18:48:10 CEST" duration-ms="105093" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriver -->
+        <test-method signature="allElementsDisplayedWithCorrectValues()[pri:0, instance:com.placelab.tests.UIDisplayedElementsAndValues@16293aa2]" started-at="2023-05-08T18:48:10 CEST" name="allElementsDisplayedWithCorrectValues" finished-at="2023-05-08T18:48:20 CEST" duration-ms="10294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- allElementsDisplayedWithCorrectValues -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.placelab.tests.UIDisplayedElementsAndValues@16293aa2]" started-at="2023-05-08T18:49:23 CEST" name="tearDown" finished-at="2023-05-08T18:49:23 CEST" duration-ms="84" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.placelab.tests.UIDisplayedElementsAndValues -->
+    </test> <!-- Placelab Login test -->
+  </suite> <!-- Login suite -->
+</testng-results>
