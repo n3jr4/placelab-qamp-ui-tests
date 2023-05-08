@@ -28,7 +28,7 @@ public class NegativeLoginTestEmptyFields {
     }
 
     @Test
-    public void loginWithValidCredentials() {
+    public void testLoginWithEmptyFields() {
 
         driver.findElement(By.id("email")).sendKeys("");
         driver.findElement(By.id("password")).sendKeys("");

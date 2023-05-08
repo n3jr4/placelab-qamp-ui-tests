@@ -1,8 +1,8 @@
 package com.placelab.tests;
 
 import java.time.Duration;
-
 import com.placelab.utils.WebDriverSetup;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -26,12 +26,18 @@ public class NegativeLoginTestInvalidEmail {
         final LoginFormDisplayed loginForm = new LoginFormDisplayed();
         loginForm.isLoginFormDisplayed(this.driver);
     }
-
+    @BeforeTest
+    public static String generateRandomEmail() {
+        String username = RandomStringUtils.randomAlphanumeric(10);
+        String domain = RandomStringUtils.randomAlphanumeric(5) + ".com";
+        String email = username + "@" + domain;
+        return email;
+    }
     @Parameters("password")
     @Test
-    public void loginWithValidCredentials(final String password) {
+    public void testLoginWithInvalidEmail(final String password) {
 
-        driver.findElement(By.id("email")).sendKeys("nejraskandro@gmal.com");
+        driver.findElement(By.id("email")).sendKeys(generateRandomEmail());
         driver.findElement(By.id("password")).sendKeys(password);
         driver.findElement(By.cssSelector("#login_form > input.btn.large-btn[value = 'Log in']")).click();
 

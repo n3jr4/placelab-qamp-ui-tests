@@ -24,7 +24,7 @@ public class PositiveLoginTestValidCredentials {
 
     @Parameters({"email", "password"})
     @Test
-    public void loginWithValidCredentials(final String email, final String password) {
+    public void testLoginWithValidCredentials(final String email, final String password) {
 
         driver.findElement(By.id("email")).sendKeys(email);
         driver.findElement(By.id("password")).sendKeys(password);

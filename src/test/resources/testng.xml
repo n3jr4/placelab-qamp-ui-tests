@@ -8,7 +8,7 @@
             <class name="com.placelab.tests.NegativeLoginTestEmptyFields"/>
             <class name="com.placelab.tests.NegativeLoginTestInvalidEmail"/>
             <class name="com.placelab.tests.NegativeLoginTestInvalidPassword"/>
-            <class name="com.placelab.tests.ForgotPasswordFunctionality"/>
+            <class name="com.placelab.tests.PositiveForgotPasswordTest"/>
         </classes>
     </test>
 </suite>

@@ -29,7 +29,7 @@ public class NegativeLoginTestInvalidPassword {
 
     @Parameters("email")
     @Test
-    public void loginWithValidCredentials(final String email) {
+    public void testLoginWithInvalidPassword(final String email) {
 
         driver.findElement(By.id("email")).sendKeys(email);
         driver.findElement(By.id("password")).sendKeys("123987");
