@@ -29,9 +29,7 @@ public class LoginTests {
 
     @Parameters({"email", "password"})
     @Test(priority = 1, groups = "positive", description = "Validate login with valid credentials.")
-
     public void testLoginWithValidCredentials(final String email, final String password) {
-
         loginPage.validateLoginPageContent();
         loginPage.enterCredentials(email, password);
         loginPage.clickSubmitLoginButton();
@@ -62,7 +60,6 @@ public class LoginTests {
 
     @Parameters("password")
     @Test(priority = 3, groups = "negative", description = "Validate login with invalid email address.")
-
     public void testLoginWithInvalidEmail(final String password) {
         loginPage.validateLoginPageContent();
         loginPage.enterCredentials(generateRandomEmail(), password);

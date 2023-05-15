@@ -63,9 +63,11 @@ public class LoginPage {
     public void clickSubmitLoginButton() {
         driver.findElement(LOGIN_BUTTON).click();
     }
+
     public void clickLoginButtonByEnter() {
         driver.findElement(PASSWORD_INPUT).sendKeys(Keys.ENTER);
     }
+
     public void forgetPasswordLinkClick() {
         driver.findElement(FORGET_PASSWORD_LINK).click();
     }

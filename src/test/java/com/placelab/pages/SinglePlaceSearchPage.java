@@ -41,7 +41,6 @@ public class SinglePlaceSearchPage {
     public SinglePlaceSearchPage(final WebDriver webDriver) {
         this.driver = webDriver;
     }
-
     public void validateSinglePlaceSearchPageContent() {
         final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
@@ -111,17 +110,9 @@ public class SinglePlaceSearchPage {
 
     //Used this method to select random category from Aldin as I didn't come up with better solution so far
     private By selectRandomCategory() {
-        final List<String> listOfCategories = driver.findElement(REPORT_CATEGORY_LIST)
-                .getText()
-                .lines()
-                .toList();
+        final List<String> listOfCategories = driver.findElement(REPORT_CATEGORY_LIST).getText().lines().toList();
         final Random randomNumber = new Random();
-
-        return By.xpath(
-                "//label[contains(text(), '" +
-                        listOfCategories.get(randomNumber.nextInt(0, listOfCategories.size() - 1)) +
-                        "')]"
-        );
+        return By.xpath("//label[contains(text(), '" + listOfCategories.get(randomNumber.nextInt(0, listOfCategories.size() - 1)) + "')]");
     }
 
 }

@@ -17,7 +17,7 @@ public class LoginFormDisplayed {
         final boolean isPasswordFieldDisplayed = driver.findElement(By.id("password")).isDisplayed();
         Assert.assertTrue(isPasswordFieldDisplayed, "Validation if password field is displayed.");
         final boolean isPasswordFieldEnabled = driver.findElement(By.id("password")).isEnabled();
-        Assert.assertTrue(isPasswordFieldEnabled, "Validation if email field is set to receive input.");
+        Assert.assertTrue(isPasswordFieldEnabled, "Validation if password field is set to receive input.");
 
         final boolean isForgetPasswordLinkDisplayed = driver.findElement(By.cssSelector("#password-area > a")).isDisplayed();
         Assert.assertTrue(isForgetPasswordLinkDisplayed, "Validation if forget password link is displayed.");

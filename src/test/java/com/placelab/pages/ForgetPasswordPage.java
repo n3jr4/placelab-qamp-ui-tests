@@ -17,6 +17,7 @@ public class ForgetPasswordPage {
     public void validateForgetPasswordPageLink() {
         Assert.assertEquals(driver.getCurrentUrl(), FORGET_PASSWORD_PAGE_LINK, "Validation if user is on Forget password page.");
     }
+
     public void enterEmail(final String email) {
         driver.findElement(EMAIL_INPUT).sendKeys(email);
     }
