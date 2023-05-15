@@ -3,12 +3,7 @@
 <suite name="Login suite" verbose="1">
     <test name="Placelab Login test">
         <classes>
-            <class name="com.placelab.tests.UIDisplayedElementsAndValues"/>
-            <class name="com.placelab.tests.PositiveLoginTestValidCredentials"/>
-            <class name="com.placelab.tests.NegativeLoginTestEmptyFields"/>
-            <class name="com.placelab.tests.NegativeLoginTestInvalidEmail"/>
-            <class name="com.placelab.tests.NegativeLoginTestInvalidPassword"/>
-            <class name="com.placelab.tests.PositiveForgotPasswordTest"/>
+            <class name="com.placelab.tests.SinglePlaceSearchSmokeTest"></class>
         </classes>
     </test>
 </suite>
