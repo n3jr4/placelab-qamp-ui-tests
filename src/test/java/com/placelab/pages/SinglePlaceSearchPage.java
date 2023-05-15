@@ -41,6 +41,7 @@ public class SinglePlaceSearchPage {
     public SinglePlaceSearchPage(final WebDriver webDriver) {
         this.driver = webDriver;
     }
+
     public void validateSinglePlaceSearchPageContent() {
         final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
@@ -64,9 +65,11 @@ public class SinglePlaceSearchPage {
 
         Assert.assertTrue(driver.findElement(CREATE_REPORT_BUTTON).isDisplayed(), "Validation if button is displayed.");
     }
+
     public void validateSinglePlaceSearchPageLink() {
         Assert.assertEquals(driver.getCurrentUrl(), SPS_LINK, "Validation if if the user is on Login page.");
     }
+
     public boolean isCreateReportButtonEnabled() {
         return driver.findElement(CREATE_REPORT_BUTTON).isEnabled();
     }
@@ -91,7 +94,7 @@ public class SinglePlaceSearchPage {
 
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(SUGGESTED_ADDRESS_FROM_DROPDOWN));
-        Assert.assertTrue(driver.findElement(SUGGESTED_ADDRESS_FROM_DROPDOWN).isDisplayed(),"Validate if suggested location section is displayed");
+        Assert.assertTrue(driver.findElement(SUGGESTED_ADDRESS_FROM_DROPDOWN).isDisplayed(), "Validate if suggested location section is displayed");
         driver.findElement(SUGGESTED_ADDRESS_FROM_DROPDOWN).click();
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(BUTTON_YES_FOR_CONFIRMING_ADDRESS));

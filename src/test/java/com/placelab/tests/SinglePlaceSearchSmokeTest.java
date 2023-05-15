@@ -48,7 +48,7 @@ public class SinglePlaceSearchSmokeTest {
         Faker faker = new Faker();
         final String location = faker.country().capital();
         final String placeName = faker.country().name();
-        final String reportName = faker.funnyName().name();
+        final String reportName = location.toString() + " " + faker.funnyName().name().toString();
         final String phoneNumber = faker.phoneNumber().phoneNumber();
         singlePlaceSearchPage.fullyFillReportForm(reportName, placeName, phoneNumber, location);
         //singlePlaceSearchPage.fillOnlyLocationAndName(location, placeName);

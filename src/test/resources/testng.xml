@@ -6,7 +6,7 @@
             <class name="com.placelab.tests.LoginTests"></class>
         </classes>
     </test>
-    <test name="Placelab Single Place Search test">
+   <test name="Placelab Single Place Search test">
         <classes>
             <class name="com.placelab.tests.SinglePlaceSearchSmokeTest"></class>
         </classes>

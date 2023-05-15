@@ -7,7 +7,11 @@ import com.placelab.pages.SentEmailPage;
 import com.placelab.utils.WebDriverSetup;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
+
+import java.time.Duration;
 
 public class LoginTests {
     private WebDriver driver;
@@ -33,11 +37,13 @@ public class LoginTests {
         loginPage.validateLoginPageContent();
         loginPage.enterCredentials(email, password);
         loginPage.clickSubmitLoginButton();
+
         homePage.validateHomePageLink();
         homePage.validateHomePageTitle();
         final String expectedUserRole = "Group Admin";
         homePage.validateUserRole(expectedUserRole);
         homePage.signOut();
+
         loginPage.validateLoginPageLink();
     }
 
@@ -96,7 +102,6 @@ public class LoginTests {
         forgetPasswordPage.clickContinueButton();
 
         sentEmailPage.validateSentEmailPageLink();
-
     }
 
     @AfterMethod(alwaysRun = true)

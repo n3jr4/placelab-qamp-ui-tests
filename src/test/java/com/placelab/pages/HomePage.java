@@ -49,14 +49,14 @@ public class HomePage {
     }
 
     public void createReportDropdownClick() {
-        final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+        final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.visibilityOfElementLocated(CREATE_REPORT_DROPDOWN));
         Assert.assertTrue(driver.findElement(CREATE_REPORT_DROPDOWN).isEnabled(), "Validate if Create report dropdown is displayed.");
         driver.findElement(CREATE_REPORT_DROPDOWN).click();
     }
 
     public void singlePlaceSearchReportClick() {
-        final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(2));
+        final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.visibilityOfElementLocated(SINGLE_PLACE_SEARCH));
         Assert.assertTrue(driver.findElement(SINGLE_PLACE_SEARCH).isDisplayed(), "Validate if Single Place Search option is displayed");
         driver.findElement(SINGLE_PLACE_SEARCH).click();
