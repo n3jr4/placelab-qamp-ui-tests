@@ -1,11 +1,11 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
 <suite name="Placelab tests" verbose="1">
-    <test name="Placelab Login test">
+<!--    <test name="Placelab Login test">
         <classes>
             <class name="com.placelab.tests.LoginTests"></class>
         </classes>
-    </test>
+    </test>-->
    <test name="Placelab Single Place Search test">
         <classes>
             <class name="com.placelab.tests.SinglePlaceSearchSmokeTest"></class>

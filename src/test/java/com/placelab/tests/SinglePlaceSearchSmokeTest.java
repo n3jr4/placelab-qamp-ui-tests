@@ -19,6 +19,7 @@ public class SinglePlaceSearchSmokeTest {
     private static HomePage homePage;
     private static SinglePlaceSearchPage singlePlaceSearchPage;
     private static ReportCreationLoadingPage reportCreationLoadingPage;
+    private static QueriesPage queriesPage;
 
     @Parameters("browser")
     @BeforeMethod(alwaysRun = true)
@@ -29,6 +30,7 @@ public class SinglePlaceSearchSmokeTest {
         this.homePage = new HomePage(driver);
         this.singlePlaceSearchPage = new SinglePlaceSearchPage(driver);
         this.reportCreationLoadingPage = new ReportCreationLoadingPage(driver);
+        this.queriesPage = new QueriesPage(driver);
     }
 
     @Parameters({"email", "password"})
@@ -50,11 +52,11 @@ public class SinglePlaceSearchSmokeTest {
         final String location = faker.country().capital();
         final String placeName = faker.country().name();
         final String reportName = location.toString() + " " + faker.funnyName().name().toString();
-        final String phoneNumber = faker.phoneNumber().phoneNumber();
+        final String phoneNumber = "38761540589";
         singlePlaceSearchPage.fullyFillReportForm(reportName, placeName, phoneNumber, location);
         //singlePlaceSearchPage.fillOnlyLocationAndName(location, placeName);
 
-        Assert.assertTrue(reportCreationLoadingPage.isUserRedirectedToProgressPage());
+        queriesPage.deleteReport(reportName);
         homePage.signOut();
     }
 

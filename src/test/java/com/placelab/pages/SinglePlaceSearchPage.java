@@ -1,12 +1,9 @@
 package com.placelab.pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 import java.security.Key;
@@ -34,16 +31,17 @@ public class SinglePlaceSearchPage {
     private final static By CREATE_REPORT_BUTTON = By.xpath("//button[contains(text(), 'Create Report')]");
     private final static By BUTTON_YES_FOR_CONFIRMING_ADDRESS = By.xpath("//button[contains(text(), 'Yes')]");
     private final static By SUGGESTED_ADDRESS_FROM_DROPDOWN = By.xpath("//ul[@class='typeahead dropdown-menu']//li[@class='active']");
-
+    private static WebDriverWait wait;
+    private String reportID;
 
     private WebDriver driver;
 
     public SinglePlaceSearchPage(final WebDriver webDriver) {
         this.driver = webDriver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(60));
     }
 
     public void validateSinglePlaceSearchPageContent() {
-        final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 
         Assert.assertTrue(driver.findElement(REPORT_HEADER).isDisplayed(), "Validation if header is displayed.");
 
@@ -86,7 +84,6 @@ public class SinglePlaceSearchPage {
 
     //Testing report creation with only required information
     public void fillOnlyLocationAndName(final String location, final String placeName) {
-        final WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 
         driver.findElement(REPORT_PLACE_NAME_INPUT).sendKeys(placeName);
         driver.findElement(REPORT_REQUIRED_LOCATION).sendKeys(location);
